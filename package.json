@@ -12,3 +12,4 @@
     "@google-cloud/sql-connector": "^1.3.4"
   }
 }
+git commit -m "initial commit: add package.json and index.js"
