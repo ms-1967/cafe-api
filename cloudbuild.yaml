@@ -1,14 +1,13 @@
 steps:
-  - name: gcr.io/k8s-skaffold/pack
+  - name: gcr.io/buildpacks/builder:latest
     args:
-      - build
-      - gcr.io/$PROJECT_ID/cafe-api
-      - --builder=gcr.io/buildpacks/builder:latest
-      - --path=.
-      - --trust-builder
+      - .
+    env:
+      - GOOGLE_BUILDABLE=gcr.io/$PROJECT_ID/cafe-api
 
 images:
   - gcr.io/$PROJECT_ID/cafe-api
 
 options:
   logging: CLOUD_LOGGING_ONLY
+
