@@ -3,9 +3,8 @@ steps:
     args:
       - build
       - gcr.io/$PROJECT_ID/cafe-api
-      - --builder=gcr.io/buildpacks/builder
+      - --builder=gcr.io/buildpacks/builder:v1
       - --path=.
-
 images:
   - gcr.io/$PROJECT_ID/cafe-api
 
