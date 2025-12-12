@@ -1,7 +1,12 @@
 steps:
-  - name: gcr.io/buildpacks/builder:v1
+  - name: gcr.io/k8s-skaffold/pack
     args:
+      - build
       - gcr.io/$PROJECT_ID/cafe-api
+      - --builder=gcr.io/buildpacks/builder:v1
+      - --path=.
+      - --trust-builder
+
 images:
   - gcr.io/$PROJECT_ID/cafe-api
 
