@@ -8,3 +8,5 @@ steps:
 
 images:
   - gcr.io/$PROJECT_ID/cafe-api
+options:
+  logging: CLOUD_LOGGING_ONLY
