@@ -1,0 +1,10 @@
+steps:
+  - name: gcr.io/buildpacks/builder
+    args:
+      - build
+      - gcr.io/$PROJECT_ID/cafe-api
+      - --path
+      - .
+
+images:
+  - gcr.io/$PROJECT_ID/cafe-api
