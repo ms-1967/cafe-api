@@ -5,5 +5,9 @@ steps:
       - gcr.io/$PROJECT_ID/cafe-api
       - --builder=gcr.io/buildpacks/builder
       - --path=.
+
 images:
   - gcr.io/$PROJECT_ID/cafe-api
+
+options:
+  logging: CLOUD_LOGGING_ONLY
