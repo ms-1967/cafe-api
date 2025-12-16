@@ -10,9 +10,7 @@ steps:
 images:
   - gcr.io/$PROJECT_ID/cafe-api
 
-# Logs bucket must be top-level, not inside options
 logsBucket: gs://cafe-api-build-logs-f5ecfab1-f238-4ec6-a26xx
 
 options:
-  # LEGACY sends logs to both Cloud Logging and the bucket
   logging: LEGACY
