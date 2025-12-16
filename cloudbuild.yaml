@@ -3,7 +3,7 @@ steps:
     args:
       - build
       - gcr.io/$PROJECT_ID/cafe-api
-      - --builder=gcr.io/buildpacks/builder:latest
+      - --builder=gcr.io/buildpacks/builder:v1
       - --path=.
       - --trust-builder
 
@@ -15,4 +15,4 @@ logsBucket: gs://cafe-api-build-logs-f5ecfab1-f238-4ec6-a26xx
 
 options:
   # LEGACY sends logs to both Cloud Logging and the bucket
-  logging: LEGACY 
+  logging: LEGACY
