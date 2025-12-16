@@ -1,5 +1,15 @@
-build:
-  logsBucket: gs://cafe-api-build-logs-f5ecfab1-f238-4ec6-a26xx
+steps:
+  - name: gcr.io/k8s-skaffold/pack
+    args:
+      - build
+      - gcr.io/$PROJECT_ID/cafe-api
+      - --builder=gcr.io/buildpacks/builder:latest
+      - --path=.
+      - --trust-builder
+
+images:
+  - gcr.io/$PROJECT_ID/cafe-api
 
 options:
   logging: CLOUD_LOGGING_ONLY
+  logsBucket: gs://cafe-api-build-logs-f5ecfab1-f238-4ec6-a26xx
