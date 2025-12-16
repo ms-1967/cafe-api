@@ -1,3 +1,2 @@
 options:
-  logging: CLOUD_LOGGING_ONLY
-  logsBucket: gs://cafe-api-build-logs-f5ecfab1-f238-4ec6-a26xx
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
