@@ -4,7 +4,7 @@ on:
   workflow_dispatch:   # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write      # <-- add this block here
+  contents: write      # allow the workflow to push changes back to the repo
 
 jobs:
   generate-lock:
